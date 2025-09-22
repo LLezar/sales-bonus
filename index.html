@@ -15,10 +15,15 @@
     <script>
         console.log(data);
 
+        // debugger
         const report = analyzeSalesData(data, {
             calculateRevenue: calculateSimpleRevenue,
             calculateBonus: calculateBonusByProfit
         });
+        Array.isArray(report);
+        // console.log('Тип report:', typeof report);
+        // console.log('Является ли report массивом:', Array.isArray(report));
+        // console.log('Первый элемент report:', report[0]);
 
         if (console.table) console.table(report);
         else console.log(report);
